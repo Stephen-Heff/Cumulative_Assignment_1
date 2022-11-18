@@ -4,7 +4,11 @@
 }
 
 <h2>List</h2>
-<p>This page should be showing information about all authors</p>
+<p>This page should be showing information about all Teachers</p>
+<form action="/Teacher/List" method="get">
+    <input type="text" name="SearchKey" />
+    <input type="submit" value="search" />
+</form>
 
 
 @foreach (var teacher in Model)
