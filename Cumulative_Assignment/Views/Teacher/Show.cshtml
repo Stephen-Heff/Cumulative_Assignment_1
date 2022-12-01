@@ -4,7 +4,15 @@
 }
 
 
-<h2>Show teachers</h2>
+
+<div id="containershow">
+    <nav style="display: flex; justify-content: space-between; margin-top: 50px; margin-bottom: 20px;">
+        <a class="navlink" href="/Teacher/List">Back to Teachers</a>
+
+        <a class="dellink" style="color: red;" href="/Teacher/DeleteConfirm/@Model.TeacherId">Delete</a>
+    </nav>
+</div>
+
 @Model.TeacherFname @Model.TeacherLname
 
 @Model.EmployeeNumber
@@ -12,4 +20,6 @@
 @Model.HireDate
 
 @Model.Salary
+
+
 

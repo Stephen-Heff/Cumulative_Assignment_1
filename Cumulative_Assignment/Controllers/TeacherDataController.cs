@@ -120,6 +120,36 @@ namespace BlogProject.Controllers
             return NewTeacher;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        ///<example>POST: /api/TeacherData/DeleteTeacher/5</example>
+        
+
+        [HttpPost]
+        public void DeleteTeacher(int id)
+        {
+
+            //Create an instance of a connection
+            MySqlConnection Conn = Blog.AccessDatabase();
+
+            //Open the connection between the web server and database
+            Conn.Open();
+
+            //Establish a new command (query) for our database
+            MySqlCommand cmd = Conn.CreateCommand();
+
+            //SQL QUERY
+            cmd.CommandText = "Delete from teachers where teacherid=@id";
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.Prepare();
+
+
+            cmd.ExecuteNonQuery();
+
+            Conn.Close();
+        }
 
 
 

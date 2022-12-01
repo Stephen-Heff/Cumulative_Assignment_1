@@ -15,3 +15,14 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
+nav{
+  display:flex;
+}
+.navlink{
+    float: right;
+}
+.dellink{
+    float: left;
+}
